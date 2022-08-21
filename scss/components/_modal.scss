@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
+  min-width: 450px;
   padding: 40px;
 
   background: var(--white-cl);
@@ -12,6 +12,19 @@
 
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    min-height: 610px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    min-height: 610px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 530px;
+    min-height: 580px;
+  }
 
   &__btn {
     position: absolute;

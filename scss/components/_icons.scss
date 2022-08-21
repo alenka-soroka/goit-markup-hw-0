@@ -47,6 +47,16 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-cl);
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+      display: block;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: inline-block;
+      padding-left: 0;
+    }
   }
 
   &__list {

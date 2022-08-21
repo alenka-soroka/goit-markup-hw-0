@@ -7,7 +7,15 @@
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
-    gap: 8px;
+    column-gap: 8px;
+    row-gap: 15px;
+    flex-wrap: wrap;
+
+    justify-content: left;
+
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -73,7 +81,17 @@
 
 .portfolio__subject {
   box-sizing: border-box;
-  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+  --items: 1;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    --items: 2;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+    --items: 3;
+  }
 }
 .portfolio__subject:hover,
 .portfolio__subject:focus {

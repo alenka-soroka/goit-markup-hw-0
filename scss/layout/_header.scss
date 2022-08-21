@@ -11,8 +11,6 @@
   min-height: 80px;
 
   &__conteiner {
-    @extend %conteiner;
-
     display: flex;
     align-items: center;
   }
@@ -27,6 +25,22 @@
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    align-items: flex-start;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 55px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 .header__link {
   @extend %reset-link;
@@ -55,4 +69,5 @@
 }
 .conttel {
   margin-right: 50px;
+  display: flex;
 }
